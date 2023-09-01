@@ -11,6 +11,12 @@ fs-14 {
     text-align: center;
 }
 
+@media(max-width: 767px) {
+    .txt-c-mobile {
+        text-align: center;
+    }
+}
+
 .txt-l {
     text-align: left;
 }
@@ -50,6 +56,10 @@ fs-14 {
     margin-bottom: 0;
 }
 
+.w-full {
+    width: 100%;
+}
+
 /* End Padding and Margin */
 
 /* Start Border */
@@ -57,7 +67,7 @@ fs-14 {
     border-radius: 6px;
 }
 
-.rad-10px {
+.rad-10 {
     border-radius: 10px;
 }
 
@@ -106,6 +116,12 @@ fs-14 {
     display: block;
 }
 
+@media(max-width: 767px) {
+    .dis-block-mobile {
+        display: block;
+    }
+}
+
 .dis-inline {
     display: inline;
 }
@@ -126,4 +142,17 @@ fs-14 {
     display: grid;
 }
 
+.gap-20 {
+    gap: 20px;
+}
+
 /* End Display */
+
+/* Start Components */
+.between-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* End Components */
