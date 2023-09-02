@@ -162,22 +162,22 @@ a {
 .page .content .head input {
     padding-left: 30px;
     border: 1px solid #ddd;
-    width: 160px;
+    width: 150px;
     transition: var(--main-transition);
 }
 
 .page .content .head input::placeholder {
-    font-size: 14px;
+    font-size: 12px;
     transition: var(--main-transition);
 }
 
 .page .content .head input:focus {
-    outline: 1px solid var(--red-color);
-    width: 200px;
+    outline: 1px solid #ddd;
+    width: 180px;
 }
 
 .page .content .head input:focus::placeholder {
-    font-size: 16px;
+    font-size: 14px;
     opacity: 0;
 }
 
@@ -256,5 +256,148 @@ a {
         gap: 10;
     }
 }
+
+.wrapper>div {
+    overflow: hidden;
+}
+
+.wrapper .welcome .box-header .heading {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.wrapper .welcome span {
+    color: var(--grey-color);
+    font-weight: normal;
+    display: block;
+}
+
+.wrapper .welcome .box-header>img {
+    width: 200px;
+    margin-bottom: -10px;
+}
+
+.wrapper .welcome>img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-top: -35px;
+    margin-left: 20px;
+    border: 2px solid white;
+    box-shadow: 0 0 5px #ddd;
+}
+
+@media(max-width: 767px) {
+    .wrapper .welcome>img {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+    }
+}
+
+.wrapper .welcome .contain {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+@media(min-width: 768px) {
+    .wrapper .contain {
+        display: flex;
+    }
+}
+
+.wrapper .welcome .contain p {
+    flex: 1;
+    font-weight: bold;
+    margin: 0;
+}
+
+@media(max-width: 768px) {
+    .wrapper .welcome .contain p:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
+
+.wrapper .welcome>a {
+    background-color: var(--blue-color);
+    padding: 4px 10px;
+    margin: 0 15px 15px auto;
+    width: fit-content;
+    transition: var(--main-transition);
+}
+
+.wrapper .welcome>a:hover {
+    background-color: var(--blue-alt-color);
+}
+
+.wrapper .quick-draft input,
+.wrapper .quick-draft textarea {
+    border: none;
+}
+
+.wrapper .quick-draft textarea {
+    resize: none;
+    min-height: 180px;
+}
+
+.wrapper .quick-draft input:focus,
+.wrapper .quick-draft textarea:focus {
+    outline: none;
+}
+
+.wrapper .quick-draft a {
+    padding: 4px 10px;
+    background-color: var(--blue-color);
+    transition: var(--main-transition);
+    width: fit-content;
+    margin: 0 0 15px auto;
+    cursor: pointer;
+}
+
+.wrapper .quick-draft a:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* Start Yearly Targets */
+.wrapper .yearly-targets>div {
+    margin-left: 100px;
+}
+
+.wrapper .yearly-targets>div::before {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    left: -95px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper .yearly-targets>div:first-of-type:before {
+    content: '\24';
+    background-color: rgb(0 117 255 / 20%);
+    color: var(--blue-color);
+}
+
+.wrapper .yearly-targets>div:nth-of-type(2)::before {
+    content: '\f121';
+    background-color: rgb(245 158 11 / 20%);
+    color: var(--orange-color);
+}
+
+.wrapper .yearly-targets>div:last-of-type::before {
+    content: '\f007';
+    background-color: rgb(34 197 94 / 20%);
+    color: var(--green-color);
+}
+
+.wrapper .yearly-targets>div .progress {}
+
+/* End Yearly Targets */
 
 /* End Content */

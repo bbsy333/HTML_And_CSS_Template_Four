@@ -1,6 +1,10 @@
 /* Start Fonts */
-fs-14 {
+.fs-14 {
     font-size: 14px;
+}
+
+.fs-15 {
+    font-size: 15px;
 }
 
 .fs-20 {
@@ -52,8 +56,20 @@ fs-14 {
     margin-top: 0;
 }
 
+.mt-5 {
+    margin-top: 5px;
+}
+
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
 }
 
 .w-full {
@@ -86,12 +102,20 @@ fs-14 {
     background-color: white;
 }
 
+.bg-eee {
+    background-color: #eee;
+}
+
 .c-black {
     color: black;
 }
 
 .c-white {
     color: white;
+}
+
+.c-grey {
+    color: var(--grey-color);
 }
 
 /* End Colors */
@@ -120,6 +144,10 @@ fs-14 {
     .dis-block-mobile {
         display: block;
     }
+
+    .hide-mobile {
+        display: none;
+    }
 }
 
 .dis-inline {
@@ -128,6 +156,10 @@ fs-14 {
 
 .dis-flex {
     display: flex;
+}
+
+.space-between {
+    justify-content: space-between;
 }
 
 .align-center {
