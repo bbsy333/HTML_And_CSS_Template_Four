@@ -1,4 +1,8 @@
 /* Start Fonts */
+.fs-13 {
+    font-size: 13px;
+}
+
 .fs-14 {
     font-size: 14px;
 }
@@ -7,8 +11,16 @@
     font-size: 15px;
 }
 
+.fs-16 {
+    font-size: 16px;
+}
+
 .fs-20 {
     font-size: 20px;
+}
+
+.f-bold {
+    font-weight: bold;
 }
 
 .txt-c {
@@ -60,8 +72,20 @@
     margin-top: 5px;
 }
 
+.mt-20 {
+    margin-top: 20px;
+}
+
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mb-6 {
+    margin-bottom: 6px;
+}
+
+.mb-8 {
+    margin-bottom: 8px;
 }
 
 .mb-10 {
@@ -70,6 +94,14 @@
 
 .mb-20 {
     margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
 }
 
 .w-full {
@@ -91,6 +123,11 @@
     border-radius: 50%;
 }
 
+.btn-shape {
+    padding: 4px 10px;
+    border-radius: 6px;
+}
+
 /* End Border */
 
 /* Start Colors */
@@ -106,6 +143,18 @@
     background-color: #eee;
 }
 
+.bg-blue {
+    background-color: var(--blue-color);
+}
+
+.bg-orange {
+    background-color: var(--orange-color);
+}
+
+.bg-green {
+    background-color: var(--green-color);
+}
+
 .c-black {
     color: black;
 }
@@ -116,6 +165,22 @@
 
 .c-grey {
     color: var(--grey-color);
+}
+
+.c-blue {
+    color: var(--blue-color);
+}
+
+.c-orange {
+    color: var(--orange-color);
+}
+
+.c-green {
+    color: var(--green-color);
+}
+
+.c-red {
+    color: var(--red-color);
 }
 
 /* End Colors */

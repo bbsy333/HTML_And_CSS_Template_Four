@@ -253,7 +253,7 @@ a {
         grid-template-columns: minmax(200px, 1fr);
         margin-left: 10px;
         margin-right: 10px;
-        gap: 10;
+        gap: 10px;
     }
 }
 
@@ -372,10 +372,11 @@ a {
     position: absolute;
     width: 80px;
     height: 80px;
-    left: -95px;
+    left: -100px;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 20px;
 }
 
 .wrapper .yearly-targets>div:first-of-type:before {
@@ -396,8 +397,133 @@ a {
     color: var(--green-color);
 }
 
-.wrapper .yearly-targets>div .progress {}
+.wrapper .yearly-targets>div .progress {
+    height: 5px;
+}
+
+.wrapper .yearly-targets>div:first-of-type .progress {
+    background-color: rgb(0 117 255 / 20%);
+}
+
+.wrapper .yearly-targets>div:nth-of-type(2) .progress {
+    background-color: rgb(245 158 11 / 20%);
+}
+
+.wrapper .yearly-targets>div:last-of-type .progress {
+    background-color: rgb(34 197 94 / 20%);
+}
+
+.wrapper .yearly-targets>div .progress span {
+    position: absolute;
+    height: 5px;
+    left: 0;
+}
+
+.wrapper .yearly-targets>div .progress span::after {
+    position: absolute;
+    right: -19px;
+    top: -41px;
+    padding: 4px 6px;
+    color: white;
+    border-radius: 6px;
+    font-size: 14px
+}
+
+.wrapper .yearly-targets>div:first-of-type .progress>span::after {
+    content: "80%";
+    background-color: var(--blue-color);
+}
+
+.wrapper .yearly-targets>div:nth-of-type(2) .progress>span::after {
+    content: "55%";
+    background-color: var(--orange-color);
+}
+
+.wrapper .yearly-targets>div:last-of-type .progress>span::after {
+    content: "75%";
+    background-color: var(--green-color);
+}
+
+.wrapper .yearly-targets>div .progress span::before {
+    position: absolute;
+    content: "";
+    right: -5px;
+    top: -16px;
+    border-style: solid;
+    border-width: 6px;
+}
+
+.wrapper .yearly-targets>div:first-of-type .progress>span::before {
+    border-color: var(--blue-color) transparent transparent transparent;
+}
+
+.wrapper .yearly-targets>div:nth-of-type(2) .progress>span::before {
+    border-color: var(--orange-color) transparent transparent transparent;
+}
+
+.wrapper .yearly-targets>div:last-of-type .progress>span::before {
+    border-color: var(--green-color) transparent transparent transparent;
+}
 
 /* End Yearly Targets */
+
+/* Start Tickets Statistics */
+.tickets-statistics .tickets-holder {
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+}
+
+.tickets-statistics .tickets-holder .box {
+    border: 1px solid #ddd
+}
+
+/* End Tickets Statistics */
+/* Start Latest News */
+@media(max-width: 767px) {
+    .wrapper .latest-news .row div:last-of-type {
+        width: fit-content;
+        margin: 10px auto;
+    }
+
+    .wrapper .latest-news .row img {
+        margin-bottom: 10px;
+    }
+}
+
+@media(min-width: 768px) {
+    .wrapper .latest-news .row {
+        display: flex;
+        align-items: center;
+    }
+
+    .wrapper .latest-news .row img {
+        margin-right: 15px;
+    }
+}
+
+.wrapper .latest-news .row:not(:last-of-type) {
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.wrapper .latest-news .row:not(:last-of-type)::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    background-color: #eee;
+}
+
+.wrapper .latest-news .row img {
+    width: 100px;
+}
+
+.wrapper .latest-news .row .info {
+    flex-grow: 1;
+}
+
+
+/* End Latest News */
 
 /* End Content */
