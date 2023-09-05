@@ -523,7 +523,27 @@ a {
     flex-grow: 1;
 }
 
-
 /* End Latest News */
+/* Start Latest Tasks */
+.wrapper .latest-tasks .line:not(:last-of-type) {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #eee;
+}
+
+.wrapper .latest-tasks .line:nth-of-type(4) h2,
+.wrapper .latest-tasks .line:nth-of-type(4) p {
+    text-decoration: line-through;
+    opacity: 0.3;
+}
+
+.wrapper .latest-tasks .line i {
+    cursor: pointer;
+}
+
+.wrapper .latest-tasks .line:nth-of-type(4) i {
+    opacity: 0.3;
+}
+
+/* End Latest Tasks */
 
 /* End Content */
