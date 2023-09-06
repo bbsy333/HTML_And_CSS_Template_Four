@@ -546,4 +546,243 @@ a {
 
 /* End Latest Tasks */
 
+/* Start Latest Uploads */
+.wrapper .latest-uploads ul li:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+/* End Latest Uploads */
+/* Start last-progress */
+.wrapper .last-progress ul::before {
+    position: absolute;
+    content: "";
+    left: 10px;
+    width: 2px;
+    height: 100%;
+    background-color: var(--blue-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.wrapper .last-progress ul li::before {
+    content: "";
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+    background-color: white;
+    outline: 2px solid var(--blue-color);
+    margin-right: 15px;
+    z-index: 1;
+}
+
+.wrapper .last-progress ul li.done::before {
+    background-color: var(--blue-color);
+}
+
+.wrapper .last-progress ul li.current::before {
+    animation: change-color 0.8s infinite alternate;
+}
+
+.wrapper .last-progress .launch-icon {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 150px;
+    opacity: 0.1;
+}
+
+/* Start Animation */
+@keyframes change-color {
+    from {
+        background-color: white;
+    }
+
+    to {
+        background-color: var(--blue-color);
+    }
+}
+
+/* End Animation */
+
+/* End last-progress */
+
+/* Start Reminders */
+
+.wrapper .reminders ul li .key {
+    display: block;
+    border-radius: 50%;
+    width: 15px;
+    height: 15px;
+    left: 0;
+}
+
+.wrapper .reminders ul li:first-of-type .key {
+    background-color: var(--blue-color);
+}
+
+.wrapper .reminders ul li .rem {
+    padding-left: 20px;
+}
+
+.wrapper .reminders ul li:first-of-type .rem {
+    border-left: 2px solid var(--blue-color);
+}
+
+.wrapper .reminders ul li:nth-of-type(2) .rem {
+    border-left: 2px solid var(--green-color);
+}
+
+.wrapper .reminders ul li:nth-of-type(3) .rem {
+    border-left: 2px solid var(--orange-color);
+}
+
+.wrapper .reminders ul li:last-of-type .rem {
+    border-left: 2px solid var(--red-color);
+}
+
+/* End Reminders */
+
+/* Start Post */
+.wrapper .latest-post .heading {
+    border-bottom: 1px solid #eee;
+}
+
+.wrapper .latest-post>p {
+    line-height: 1.8;
+    border-bottom: 1px solid #eee;
+}
+
+/* End Post */
+/* Start social stats */
+.wrapper .social-stats>div:first-of-type {
+    background-color: hsl(203, 89%, 53%, 0.2);
+}
+
+.wrapper .social-stats>div:nth-of-type(2) {
+    background-color: hsl(214, 89%, 52%, 0.2);
+}
+
+.wrapper .social-stats>div:nth-of-type(3) {
+    background-color: hsl(0, 100%, 50%, 0.2);
+}
+
+.wrapper .social-stats>div:last-of-type {
+    background-color: hsl(201, 100%, 35%, 0.2);
+}
+
+.wrapper .social-stats>div:first-of-type a {
+    background-color: #1ca0f2;
+}
+
+.wrapper .social-stats>div:nth-of-type(2) a {
+    background-color: #1876f2;
+}
+
+.wrapper .social-stats>div:nth-of-type(3) a {
+    background-color: #ff0000;
+}
+
+.wrapper .social-stats>div:last-of-type a {
+    background-color: #0074b3;
+}
+
+.wrapper .social-stats .twitter .icon {
+    color: #1ca0f2;
+}
+
+.wrapper .social-stats .facebook .icon {
+    color: #1876f2;
+}
+
+.wrapper .social-stats .youtube .icon {
+    color: #ff0000;
+}
+
+.wrapper .social-stats .linked-in .icon {
+    color: #0074b3;
+}
+
+.wrapper .social-stats div::before {
+    position: absolute;
+    font-family: "Font Awesome 5 brands";
+    font-weight: 900;
+    width: 50px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    left: 0;
+    color: white;
+    font-size: 30px;
+    transition: var(--main-transition);
+}
+
+.wrapper .social-stats .twitter::before {
+    content: "\f099";
+    background-color: #1ca0f2;
+}
+
+.wrapper .social-stats .facebook::before {
+    content: "\f39e";
+    background-color: #1876f2;
+}
+
+.wrapper .social-stats .youtube::before {
+    content: "\f167";
+    background-color: #ff0000;
+}
+
+.wrapper .social-stats .linked-in::before {
+    content: "\f08c";
+    background-color: #0074b3;
+}
+
+.wrapper .social-stats div:hover::before {
+    transform: rotate(5deg);
+}
+
+/* Start Projects table */
+.content .projects .responsive-table {
+    overflow-x: auto;
+}
+
+.content .projects .responsive-table table {
+    min-width: 1000px;
+    border-spacing: 0;
+}
+
+.content .projects table td {
+    padding: 15px;
+    transition: var(--main-transition);
+}
+
+.content .projects table tr:hover td {
+    background-color: #FAF7F7;
+}
+
+.content .projects table tbody td {
+    border-bottom: 1px solid #eee;
+    border-left: 1px solid #eee;
+}
+
+.content .projects table tbody td:last-child {
+    border-right: 1px solid #eee;
+}
+
+.content .projects table img:not(:first-child) {
+    margin-left: -20px;
+}
+
+.content .projects table img {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+/* End Projects table */
+
 /* End Content */
