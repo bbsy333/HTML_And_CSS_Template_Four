@@ -88,6 +88,10 @@
     margin: 0;
 }
 
+.mar-15 {
+    margin: 15px;
+}
+
 .mar-20 {
     margin: 20px;
 }
@@ -126,6 +130,10 @@
 
 .mb-0 {
     margin-bottom: 0;
+}
+
+.mb-5 {
+    margin-bottom: 5px;
 }
 
 .mb-6 {
@@ -168,6 +176,18 @@
     margin-right: 15px;
 }
 
+.mr-20 {
+    margin-right: 20px;
+}
+
+.mr-25 {
+    margin-right: 25px;
+}
+
+.mr-30 {
+    margin-right: 30px;
+}
+
 /* End Padding and Margin */
 /* Start Dimention */
 .w-full {
@@ -203,6 +223,14 @@
 
 .rad-50per {
     border-radius: 50%;
+}
+
+.border-none {
+    border: none;
+}
+
+.border-ccc {
+    border: 1px solid #ccc;
 }
 
 .btn-shape {
@@ -269,6 +297,10 @@
     color: var(--red-color);
 }
 
+.c-bbb {
+    color: #bbb;
+}
+
 /* End Colors */
 
 /* Start Position */
@@ -317,12 +349,28 @@
     align-items: center;
 }
 
+.justify-center {
+    justify-content: center;
+}
+
 .flex-col {
     flex-direction: column;
 }
 
+.dis-none {
+    display: none;
+}
+
 .dis-grid {
     display: grid;
+}
+
+.gap-5 {
+    gap: 5px;
+}
+
+.gap-10 {
+    gap: 10px;
 }
 
 .gap-20 {

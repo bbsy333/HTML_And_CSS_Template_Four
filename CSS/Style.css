@@ -71,11 +71,12 @@ a {
 
 @media(min-width: 767px) {
     .page .sidebar {
-        width: 250px;
+        width: 200px;
     }
 
     .page .content {
-        margin-left: 250px;
+        margin-left: 200px;
+        width: calc(100% - 200px);
     }
 }
 
@@ -87,6 +88,7 @@ a {
 
     .page .content {
         margin-left: 58px;
+        width: calc(100% - 58px);
     }
 }
 
@@ -877,7 +879,203 @@ a {
 }
 
 /* End Site Control */
+/* Start General Info */
+.general-info input:focus {
+    outline: none;
+}
 
+.general-info .email input {
+    cursor: no-drop;
+    background-color: #f0f4f8;
+    color: #bbb;
+}
+
+/* End General Info */
+
+/* Start Security Info */
+.security-info .line:not(:last-of-type) {
+    border-bottom: 1px solid #eee;
+}
+
+.security-info .line a {
+    transition: var(--main-transition);
+}
+
+.security-info .line:first-of-type a:hover {
+    background-color: var(--blue-alt-color);
+}
+
+/* End Security Info */
+
+/* Start Social Info */
+.social-info i {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f6f6f6;
+    border: 1px solid #ddd;
+    border-right: none;
+    border-radius: 6px 0 0 6px;
+    transition: var(--main-transition);
+}
+
+.social-info input {
+    height: 40px;
+    background-color: #f6f6f6;
+    border-radius: 0 6px 6px 0;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.social-info>div:focus-within i {
+    color: black;
+}
+
+/* End Social Info */
+/* Start widgets control */
+.widgets-control .control input {
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.widgets-control .control label {
+    padding-left: 30px;
+    position: relative;
+    cursor: pointer;
+}
+
+.widgets-control .control label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 14px;
+    height: 14px;
+    top: 50%;
+    margin-top: -8px;
+    border: 2px solid var(--grey-color);
+    border-radius: 4px;
+    transition: var(--main-transition);
+}
+
+.widgets-control .control label:hover::before {
+    border-color: var(--blue-alt-color);
+}
+
+.widgets-control .control label::after {
+    content: '\f00c';
+    position: absolute;
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    left: 0;
+    top: 50%;
+    margin-top: -8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue-color);
+    color: white;
+    font-size: 12px;
+    width: 17.2px;
+    height: 17.2px;
+    border-radius: 4px;
+    transform: scale(0) rotate(360deg);
+    transition: var(--main-transition);
+}
+
+.widgets-control .control input[type="Checkbox"]:checked+label::after {
+    transform: scale(1);
+}
+
+
+/* End widgets control */
+/* Start Backup Manager */
+.backup-manager .line:not(:last-of-type) {
+    margin-bottom: 10px;
+}
+
+.backup-manager .line input {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.backup-manager .line label {
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+}
+
+.backup-manager .line label::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    border: 2px solid var(--grey-color);
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    top: 50%;
+    margin-top: -9.6px;
+}
+
+.backup-manager .line label::after {
+    content: "";
+    position: absolute;
+    left: 9.4px;
+    margin-left: -7px;
+    top: 50%;
+    margin-top: -7px;
+    width: 14px;
+    height: 14px;
+    background-color: var(--blue-color);
+    border-radius: 50%;
+    transform: scale(0);
+    transition: var(--main-transition);
+}
+
+.backup-manager .line input[type="radio"]:checked+label::after {
+    transform: scale(1);
+}
+
+.backup-manager .line input[type="radio"]:checked+label::before {
+    border-color: var(--blue-alt-color);
+}
+
+.backup-manager .servers {
+    margin-top: 15px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+@media(max-width: 767px) {
+    .backup-manager .servers {
+        flex-direction: column;
+    }
+}
+
+.backup-manager .servers .server {
+    border: 2px solid #eee;
+}
+
+.backup-manager .servers input[type="radio"] {
+    -webkit-appearance: none;
+    appearance: none;
+    display: none;
+}
+
+.backup-manager .servers input[type="radio"]:checked+.server,
+.backup-manager .servers input[type="radio"]:checked+.server label {
+    border-color: var(--blue-color);
+    color: var(--blue-color);
+}
+
+.backup-manager .servers .server label {
+    cursor: pointer;
+}
+
+
+/* End Backup Manager */
 
 /* End Settings */
 
